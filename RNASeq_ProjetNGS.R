@@ -1,11 +1,11 @@
 #Projet NGS (Next Generation of Sequencing) 2022
-#auteurs: P.Lucie, R.Vanessa, T.V.C.Valérie, S.Roussaya
+#auteurs: P.Lucie, R.Vanessa, T.V.C.Val?rie, S.Roussaya
 #version 10/02/2022
 #########################################################################################
-#    Pipeline d'analyses d'expressions différentielle de gènes issus de données RNASeq
+#    Pipeline d'analyses d'expressions diff?rentielle de g?nes issus de donn?es RNASeq
 #
 #
-# Chargement des différentes librairies. NB: utilisé packages_istall.R pour les installer
+# Chargement des diff?rentes librairies. NB: utilis? packages_istall.R pour les installer
 
 library(limma) #Data analysis, linear models and differential expression for microarray and RNASeq data
 
@@ -18,11 +18,11 @@ library(Rsubread) #Includes functionality for read mapping, read counting, SNP c
 
 library(SRAdb) #The Sequence Read Archive (SRA) is the largest public repository of sequencing data from the NGS
 
-########### Etape 1: Importer les données ########################
+########### Etape 1: Importer les donn?es ########################
 url <- "https://www.ebi.ac.uk/arrayexpress/files/E-MTAB-9285/E-MTAB-9285.sdrf.txt"
 data <- read.delim(url)
 
-########### Etape 2: Contrôles qualités et filtration ######################## https://bioinformatics-core-shared-training.github.io/RNAseq-R/align-and-count.nb.html
+########### Etape 2: Contr?les qualit?s et filtration ######################## https://bioinformatics-core-shared-training.github.io/RNAseq-R/align-and-count.nb.html
 # Extract quality scores for 100 reads
 qs <- qualityScores(filename="",nreads=100)
 # Check dimension of qs
@@ -74,16 +74,17 @@ dge <- DGEList(counts=dataFrameCounts, genes=rownames(dataFrameCounts))
 ########### Etape 6: Normaliser #######################
 dge <- calcNormFactors(dge)
 
-########### Etape 7: Définir les contraste ######################
+########### Etape 7: D?finir les contraste ######################
 
 ########### Etape 8: Conversion logarithmique (log2) ############
 l2 <- log2(dataframe +2)
 
-########### Etape 9: Appliquer modèles statistiques #############
+########### Etape 9: Appliquer mod?les statistiques #############
 
-########### Etape 10: Génerer les visualisations ################
+########### Etape 10: G?nerer les visualisations ################
 
 
+##COUCOUU
 
 
 
